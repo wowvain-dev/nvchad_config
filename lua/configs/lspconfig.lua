@@ -12,7 +12,11 @@ local servers = {
   "emmet_language_server",
   "html",
   "nixd",
-
+  "svelte-language-server",
+  "html-lsp",
+  "rust_analyzer",
+  "prisma-language-server",
+  "tailwindcss-language-server"
 }
 
 -- lsps with default config
@@ -25,7 +29,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- typescript
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
